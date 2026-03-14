@@ -61,7 +61,7 @@ h3 {
 **File:** `src/components/Header.astro`
 - **Refactor:** Redesigned responsive navigation bar.
 - **Changes:**
-    - Added "Devosfera" SVG logo.
+    - Added "Devos"fera SVG logo.
     - Integrated `SearchModal` trigger button.
     - Improved mobile menu interactions and layout.
 

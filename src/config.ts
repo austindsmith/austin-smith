@@ -14,8 +14,8 @@ export const SITE = {
   showBackButton: true, // show back button in post detail
   editPost: {
     enabled: true,
-    text: "Editar este post",
-    url: "https://github.com/0xdres/astro-devosfera/edit/main/",
+    text: "Edit this post",
+    url: "https://github.com/austindsmith/austin-smith/edit/main/",
   },
   dynamicOgImage: true,
   dir: "ltr", // "rtl" | "auto"
