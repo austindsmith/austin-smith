@@ -5,4 +5,4 @@ title: "The Black Lodge"
 
 # The Black Lodge
 
-[Documentation](thedocslodge.org)
+[Documentation](https://thedocslodge.org)

@@ -5,4 +5,4 @@ title: "The White Lodge"
 
 # The White Lodge
 
-[Documentation](thedocslodge.org)
+[Documentation](https://thedocslodge.org)
