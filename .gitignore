@@ -32,5 +32,7 @@ public/pagefind
 # Vault CMS / Obsidian
 **/.obsidian/workspace.json
 **/.obsidian/workspace-mobile.json
-**/.obsidian/plugins
+**/.obsidian/plugins/obsidian-git
+**/.obsidian/plugins/vault-cms
+
 .ref/

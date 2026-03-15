@@ -1,0 +1,69 @@
+{
+  "defaultTemplate": "---\ntitle: \"{{title}}\"\ndate: {{date}}\ndescription: \"\"\ntags: []\nimage: \"\"\nimageAlt: \"\"\nimageOG: false\nhideCoverImage: false\nhideTOC: false\ntargetKeyword: \"\"\ndraft: true\n---",
+  "autoInsertProperties": true,
+  "dateFormat": "YYYY-MM-DD",
+  "enableCopyHeadingLink": true,
+  "copyHeadingLinkFormat": "astro",
+  "addTrailingSlashToLinks": true,
+  "enableOpenTerminalCommand": true,
+  "terminalProjectRootPath": ".",
+  "terminalApplicationName": "",
+  "enableTerminalDebugLogging": false,
+  "enableTerminalRibbonIcon": true,
+  "enableOpenConfigFileCommand": true,
+  "configFilePath": "astro.config.ts",
+  "enableConfigRibbonIcon": true,
+  "contentTypes": [
+    {
+      "id": "content-type-1773603653876-hentlq9hz",
+      "name": "Posts",
+      "folder": "src/data/posts",
+      "linkBasePath": "/posts/",
+      "template": "---\ntitle: \"{{title}}\"\npubDate: {{date}}\ndescription: \"\"\nfeatured: true\ndraft: true\ntags: []\nimage:\n---\n",
+      "enabled": true,
+      "creationMode": "file",
+      "indexFileName": "index",
+      "ignoreSubfolders": false,
+      "enableUnderscorePrefix": false
+    },
+    {
+      "id": "content-type-1773603668803-dy641f23r",
+      "name": "Projects",
+      "folder": "src/data/projects",
+      "linkBasePath": "/projects/",
+      "template": "---\ntitle: \"{{title}}\"\npubDate: {{date}}\ndescription: \"\"\nfeatured: true\ndraft: true\ntags: []\nimage:\n---\n",
+      "enabled": true,
+      "creationMode": "file",
+      "indexFileName": "index",
+      "ignoreSubfolders": false,
+      "enableUnderscorePrefix": false
+    },
+    {
+      "id": "content-type-1773603679014-c6i53n0md",
+      "name": "Configs",
+      "folder": "src/data/configs",
+      "linkBasePath": "/configs/",
+      "template": "---\ntitle: \"{{title}}\"\npubDate: {{date}}\ndescription: \"\"\nfeatured: true\ndraft: true\ntags: []\nimage:\n---\n",
+      "enabled": true,
+      "creationMode": "file",
+      "indexFileName": "index",
+      "ignoreSubfolders": false,
+      "enableUnderscorePrefix": false
+    }
+  ],
+  "migrationCompleted": true,
+  "helpButtonReplacement": {
+    "enabled": true,
+    "commandId": "astro-composer:edit-astro-config",
+    "iconId": "rocket"
+  },
+  "showMdxFilesInExplorer": true,
+  "processBackgroundFileChanges": true,
+  "syncDraftDate": false,
+  "draftProperty": "",
+  "draftLogic": "true-is-draft",
+  "publishDateField": "",
+  "renameOnTitleClick": false,
+  "updateModifiedDate": false,
+  "modifiedDateField": ""
+}
