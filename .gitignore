@@ -29,3 +29,8 @@ pnpm-debug.log*
 # pagefind
 
 public/pagefind
+# Vault CMS / Obsidian
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+**/.obsidian/plugins
+.ref/
