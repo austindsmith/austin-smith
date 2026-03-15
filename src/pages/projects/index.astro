@@ -1,0 +1,75 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { SITE } from "@/config";
+
+const allFiles = import.meta.glob(
+  ["./**/*.md", "!./index.md", "!./apps/tally/privacy-policy.md"],
+  { eager: true }
+);
+
+const projects = Object.entries(allFiles).map(([path, mod]) => {
+  const segments = path.replace("./", "").split("/");
+  const group = segments.length > 1 ? segments[0] : "other";
+  const slug = path.replace("./", "").replace(".md", "");
+  return {
+    title: (mod as any).frontmatter?.title ?? slug,
+    href: `/projects/${slug}`,
+    group,
+  };
+});
+
+const groups: string[] = [...new Set(projects.map(p => p.group))];
+---
+
+<Layout title={`Projects | ${SITE.title}`}>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout pb-12">
+    <div class="archive-hero" data-archive-hero>
+      <div class="aurora-orb aurora-orb-1"></div>
+      <div class="aurora-orb aurora-orb-2"></div>
+      <div class="aurora-orb aurora-orb-3"></div>
+      <div class="aurora-mouse" data-archive-mouse></div>
+      <div class="relative z-10">
+        <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
+          <span class="glow-text">Projects</span>
+        </h1>
+        <p class="mt-3 max-w-lg text-foreground/70 italic">
+          These are some things I've made or am working on. Not everything of
+          course, stuff that's gone through a certain level of curation first.
+        </p>
+      </div>
+    </div>
+
+    <div class="app-prose mt-8 max-w-app space-y-10">
+      {
+        groups.map(group => (
+          <section>
+            <h2 class="mb-4 text-lg font-semibold tracking-wide text-foreground/60 capitalize">
+              {group}
+            </h2>
+            <ul class="space-y-2">
+              {projects
+                .filter(p => p.group === group)
+                .map(project => (
+                  <li class="group/card relative rounded-2xl border border-border/25 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-accent/5 hover:shadow-lg hover:shadow-accent/10">
+                    <a
+                      href={project.href}
+                      class="text-base font-semibold text-foreground transition-colors duration-200 group-hover/card:text-accent"
+                    >
+                      {project.title}
+                      <span class="absolute inset-0 z-10" aria-hidden="true" />
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </section>
+        ))
+      }
+    </div>
+  </main>
+  <Footer />
+</Layout>

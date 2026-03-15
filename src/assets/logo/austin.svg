@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" xmlns:bx="https://boxy-svg.com">
+  <g transform="matrix(1.112155, 0, 0, 1.112155, 12.50231, -14.050506)" id="object-0">
+    <text class="logo-text-left" style="fill: rgb(51, 51, 51); font-family: var(--font-cascadia-code), 'Cascadia Code', monospace; font-size: 150px; font-weight: 600; white-space: pre;" x="0" y="176.957">Au</text>
+    <text class="logo-sphere" style="fill: rgb(167, 90, 90); font-family: var(--font-cascadia-code), 'Cascadia Code', monospace; font-size: 150px; font-weight: 600; letter-spacing: -8px; paint-order: stroke; white-space: pre;" x="190" y="176.957">{st}</text>
+    <text class="logo-text-right" style="fill: rgb(51, 51, 51); font-family: var(--font-cascadia-code), 'Cascadia Code', monospace; font-size: 150px; font-weight: 600; white-space: pre;">
+      <tspan x="500" y="89.954" style="baseline-shift: sub;">in</tspan>
+    </text>
+  </g>
+  <defs>
+    <bx:export>
+      <bx:file format="svg" href="#object-0" path="austin-logo.svg"/>
+    </bx:export>
+  </defs>
+</svg>

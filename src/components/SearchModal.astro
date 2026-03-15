@@ -8,7 +8,7 @@ import "@pagefind/default-ui/css/ui.css";
   class="search-modal-overlay"
   role="dialog"
   aria-modal="true"
-  aria-label="Buscar en el sitio"
+  aria-label="Search en el sitio"
 >
   <div class="search-modal-backdrop" data-search-close></div>
   <div class="search-modal-container" data-modal-card>
@@ -48,7 +48,7 @@ import "@pagefind/default-ui/css/ui.css";
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
         </span>
-        <span class="search-title-text">Buscar</span>
+        <span class="search-title-text">Search</span>
       </div>
       <div class="search-modal-shortcuts">
         <kbd class="kbd-key">⌘</kbd>
@@ -79,7 +79,12 @@ import "@pagefind/default-ui/css/ui.css";
 
     <!-- Search body -->
     <div class="search-modal-body">
-      <div id="modal-pagefind-search" class="premium-search" style="--pagefind-ui-scale: 0.9;"></div>
+      <div
+        id="modal-pagefind-search"
+        class="premium-search"
+        style="--pagefind-ui-scale: 0.9;"
+      >
+      </div>
       <!-- Empty state illustration -->
       <div class="search-empty-state" data-search-empty>
         <div class="empty-icon">
@@ -239,7 +244,7 @@ import "@pagefind/default-ui/css/ui.css";
         window.requestIdleCallback || ((cb: () => void) => setTimeout(cb, 1));
       onIdle(async () => {
         if (signal.aborted) return;
-        
+
         // Ensure Pagefind UI does not re-initialize on the same element
         if (container.querySelector(".pagefind-ui")) return;
 

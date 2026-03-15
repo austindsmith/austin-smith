@@ -4,6 +4,7 @@ import { SITE } from "@/config";
 
 export const BLOG_PATH = "src/data/blog";
 export const GALLERY_PATH = "src/data/galleries";
+export const PROJECT_PATH = "src/data/projects";
 
 const blog = defineCollection({
   loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${BLOG_PATH}` }),

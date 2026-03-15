@@ -27,7 +27,6 @@ const { entry } = Astro.props;
 const { gallery: slug } = Astro.params;
 const { title, description, pubDatetime, coverImage, tags } = entry.data;
 
-// Cargar todas las imágenes de la galería en build-time con un glob estático
 const allImages = import.meta.glob<{ default: ImageMetadata }>(
   "/src/data/galleries/**/*.{jpg,jpeg,png,webp,avif,gif,JPG,JPEG,PNG,WEBP}",
   { eager: true }
@@ -63,11 +62,13 @@ const hasCoverInFolder = coverImage
   : false;
 ---
 
-<Layout title={`${title} | Galerías | ${SITE.title}`} description={description}>
+<Layout
+  title={`${title} | Galleries | ${SITE.title}`}
+  description={description}
+>
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-16">
-    <!-- Header de la galería -->
     <header class="gallery-detail-header">
       <div class="mb-1">
         <Datetime pubDatetime={pubDatetime} class="text-sm" />
@@ -143,7 +144,7 @@ const hasCoverInFolder = coverImage
         </ul>
       ) : (
         <p class="mt-12 text-center text-foreground/50 italic">
-          Esta galería todavía no tiene imágenes.
+          This gallery does not have any images yet.
         </p>
       )
     }
