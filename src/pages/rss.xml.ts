@@ -5,7 +5,7 @@ import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
 
 export async function GET() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("post");
   const sortedPosts = getSortedPosts(posts);
   return rss({
     title: SITE.title,
@@ -15,7 +15,7 @@ export async function GET() {
       link: getPath(id, filePath),
       title: data.title,
       description: data.description,
-      pubDate: new Date(data.modDatetime ?? data.pubDatetime),
+      pubDate: new Date(data.modDatetime ?? data.pubDate),
     })),
   });
 }

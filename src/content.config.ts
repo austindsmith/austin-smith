@@ -2,16 +2,16 @@ import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 import { SITE } from "@/config";
 
-export const BLOG_PATH = "src/data/blog";
+export const POST_PATH = "src/data/posts";
 export const GALLERY_PATH = "src/data/galleries";
 export const PROJECT_PATH = "src/data/projects";
 
-const blog = defineCollection({
-  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${BLOG_PATH}` }),
+const post = defineCollection({
+  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${POST_PATH}` }),
   schema: ({ image }) =>
     z.object({
       author: z.string().default(SITE.author),
-      pubDatetime: z.date(),
+      pubDate: z.date(),
       modDatetime: z.date().optional().nullable(),
       title: z.string(),
       featured: z.boolean().optional(),
@@ -31,11 +31,11 @@ const galleries = defineCollection({
     z.object({
       title: z.string(),
       description: z.string(),
-      pubDatetime: z.date(),
+      pubDate: z.date(),
       draft: z.boolean().optional(),
       coverImage: image().optional(),
       tags: z.array(z.string()).default([]),
     }),
 });
 
-export const collections = { blog, galleries };
+export const collections = { post, galleries };

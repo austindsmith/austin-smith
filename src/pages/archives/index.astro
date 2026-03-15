@@ -13,7 +13,7 @@ if (!SITE.showArchives) {
   return Astro.redirect("/404");
 }
 
-const posts = await getCollection("blog", ({ data }) => !data.draft);
+const posts = await getCollection("post", ({ data }) => !data.draft);
 
 const months = [
   "January",
@@ -33,7 +33,7 @@ const months = [
 const totalPosts = posts.length;
 
 const yearGroups = Object.entries(
-  getPostsByGroupCondition(posts, post => post.data.pubDatetime.getFullYear())
+  getPostsByGroupCondition(posts, post => post.data.pubDate.getFullYear())
 ).sort(([a], [b]) => Number(b) - Number(a));
 ---
 
@@ -72,7 +72,7 @@ const yearGroups = Object.entries(
           const monthGroups = Object.entries(
             getPostsByGroupCondition(
               yearPosts,
-              post => post.data.pubDatetime.getMonth() + 1
+              post => post.data.pubDate.getMonth() + 1
             )
           ).sort(([a], [b]) => Number(b) - Number(a));
 
@@ -97,11 +97,11 @@ const yearGroups = Object.entries(
                     {monthPosts
                       .sort(
                         (a, b) =>
-                          new Date(b.data.pubDatetime).getTime() -
-                          new Date(a.data.pubDatetime).getTime()
+                          new Date(b.data.pubDate).getTime() -
+                          new Date(a.data.pubDate).getTime()
                       )
                       .map(post => {
-                        const day = new Date(post.data.pubDatetime).getDate();
+                        const day = new Date(post.data.pubDate).getDate();
                         return (
                           <a
                             href={getPath(post.id, post.filePath)}

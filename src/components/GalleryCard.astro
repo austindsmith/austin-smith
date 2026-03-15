@@ -12,7 +12,7 @@ type Props = {
 };
 
 const { gallery, slug, fallbackImage, imageCount } = Astro.props;
-const { title, description, pubDatetime, coverImage } = gallery.data;
+const { title, description, pubDate, coverImage } = gallery.data;
 const coverSrc = coverImage ?? fallbackImage;
 ---
 
@@ -85,7 +85,7 @@ const coverSrc = coverImage ?? fallbackImage;
     >
       {title}
     </h2>
-    <Datetime pubDatetime={pubDatetime} class="text-xs" />
+    <Datetime pubDate={pubDate} class="text-xs" />
     <p class="mt-1 line-clamp-2 text-sm leading-relaxed opacity-65">
       {description}
     </p>

@@ -41,8 +41,7 @@ const rawGalleries = await getCollection(
 const galleries = rawGalleries
   .sort(
     (a, b) =>
-      new Date(b.data.pubDatetime).getTime() -
-      new Date(a.data.pubDatetime).getTime()
+      new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
   )
   .map(gallery => {
     const slug = getSlug(gallery.id);

@@ -13,7 +13,7 @@ type Props = {
   description?: string;
   ogImage?: string;
   canonicalURL?: string;
-  pubDatetime?: Date;
+  pubDate?: Date;
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
 };
@@ -25,7 +25,7 @@ const {
   description = SITE.desc,
   ogImage = SITE.ogImage ? `/${SITE.ogImage}` : "/og.png",
   canonicalURL = new URL(Astro.url.pathname, Astro.url),
-  pubDatetime,
+  pubDate,
   modDatetime,
   scrollSmooth = false,
 } = Astro.props;
@@ -37,7 +37,7 @@ const structuredData = {
   "@type": "BlogPosting",
   headline: `${title}`,
   image: `${socialImageURL}`,
-  datePublished: `${pubDatetime?.toISOString()}`,
+  datePublished: `${pubDate?.toISOString()}`,
   ...(modDatetime && { dateModified: modDatetime.toISOString() }),
   author: [
     {
@@ -95,10 +95,10 @@ const structuredData = {
 
     <!-- Article Published/Modified time -->
     {
-      pubDatetime && (
+      pubDate && (
         <meta
           property="article:published_time"
-          content={pubDatetime.toISOString()}
+          content={pubDate.toISOString()}
         />
       )
     }
@@ -273,7 +273,8 @@ const structuredData = {
     height: 1100px;
     margin-left: -550px;
     margin-top: -550px;
-    transform: translate(var(--site-cx, 50vw), var(--site-cy, 50vh)) translateZ(0);
+    transform: translate(var(--site-cx, 50vw), var(--site-cy, 50vh))
+      translateZ(0);
     background: radial-gradient(
       circle,
       color-mix(in oklab, var(--accent) 6%, transparent) 0%,

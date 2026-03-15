@@ -13,7 +13,7 @@ import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
 import IntroAudio from "@/components/IntroAudio.astro";
 
-const posts = await getCollection("blog");
+const posts = await getCollection("post");
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);

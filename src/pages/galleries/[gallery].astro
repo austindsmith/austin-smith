@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { gallery: slug } = Astro.params;
-const { title, description, pubDatetime, coverImage, tags } = entry.data;
+const { title, description, pubDate, coverImage, tags } = entry.data;
 
 const allImages = import.meta.glob<{ default: ImageMetadata }>(
   "/src/data/galleries/**/*.{jpg,jpeg,png,webp,avif,gif,JPG,JPEG,PNG,WEBP}",
@@ -71,7 +71,7 @@ const hasCoverInFolder = coverImage
   <main id="main-content" class="app-layout pb-16">
     <header class="gallery-detail-header">
       <div class="mb-1">
-        <Datetime pubDatetime={pubDatetime} class="text-sm" />
+        <Datetime pubDate={pubDate} class="text-sm" />
       </div>
       <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h1>
       {

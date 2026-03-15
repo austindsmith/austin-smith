@@ -7,14 +7,14 @@ import timezone from "dayjs/plugin/timezone";
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-const postFilter = ({ data }: CollectionEntry<"blog">) => {
-  const pubDatetime = dayjs(data.pubDatetime).tz(
+const postFilter = ({ data }: CollectionEntry<"post">) => {
+  const pubDate = dayjs(data.pubDate).tz(
     data.timezone || SITE.timezone
   );
 
   const isPublishTimePassed =
     dayjs().tz(SITE.timezone).valueOf() >
-    pubDatetime.valueOf() - SITE.scheduledPostMargin;
+    pubDate.valueOf() - SITE.scheduledPostMargin;
   return !data.draft && (import.meta.env.DEV || isPublishTimePassed);
 };
 
