@@ -3,26 +3,24 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-Welcome to my digital corner. I am a **developer** and **student** with a passion for technology, video games, and building things that live on the internet.
+Welcome to my digital corner. I'm a **data engineer**, **Linux tinkerer**, and chronic over-builder of things that probably didn't need to exist.
 
 ## Who Am I?
 
-My name is Austin, and for as long as I can remember, I’ve always been curious about how things work—from taking apart toys as a child to dissecting other people's code at 2 AM. I am currently studying engineering while working on projects that challenge me to learn something new every day.
+My name is Austin. I'm a data analyst. I've been a CIO, CTO, application developer, helpdesk technician, student teacher and ran a computer lab for an elementary school.
 
-When I’m not coding, I’m probably off in some virtual world—exploring maps, completing quests, or competing online. Video games aren't just a hobby for me; they’ve also taught me how to solve problems, work in a team, and, above all, not to give up after attempt #847.
+When I'm not at a keyboard for work, I'm usually at a keyboard at my house.
 
 ## What I Do
 
-- **Web Development** — I love building modern web experiences using technologies like Astro, React, TypeScript, and everything else the JavaScript ecosystem has to offer.
-- **Open Source** — I believe in the power of open source. You can find my projects on [GitHub](https://github.com/austindsmith/).
-- **Continuous Learning** — I am always exploring new tools, frameworks, and concepts. Technology evolves fast, and I enjoy keeping pace with it.
+- **Data Engineering** — Building pipelines with DuckDB, dbt, Dagster, Observable Framework, Medallion architecture, the works.
+- **Infrastructure** — Self-hosted Kubernetes (k3s + ArgoCD), Proxmox, GitOps all the way down. I run my own everything and am always rebuilding it.
+- **Web Development** — Astro, React, TypeScript. This site is built with Astro and I genuinely enjoy it. I've dabbled in Flask, Django, Svelte, really anything that lets you put text on the internet.
+- **Open Source** — Most of what I build ends up on [GitHub](https://github.com/austindsmith/). Some of it is even documented. Lots of historical purges.
 
-## Gaming
-
-Video games are part of my DNA. From epic RPGs to competitive shooters, I enjoy just about every genre. It’s a space where creativity meets strategy and pure fun.
 
 ## This Blog
 
-**Devosfera** was born as a space to document my journey as a developer, share what I learn, and connect with people who share my passions. Here, you’ll find posts about development, technology, and the occasional random late-night musing.
+This is where I write about what I'm building, what I'm learning, and the occasional rabbit hole I probably shouldn't have gone down at 11 PM. Expect posts about data engineering, Linux, infrastructure, and whatever I've been hyperfixating on lately.
 
-If you’d like to connect, feel free to find me on [GitHub](https://github.com/austindsmith/) or [LinkedIn](https://linkedin.com/in/austin-smith-88362a127). It’s always great to meet cool people from the community.
+If you'd like to connect, find me on [GitHub](https://github.com/austindsmith/) or [LinkedIn](https://www.linkedin.com/in/austin-smith-88362a127). Always happy to talk shop.
