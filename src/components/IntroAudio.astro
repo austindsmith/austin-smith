@@ -1,3 +1,4 @@
+---
 interface Props {
   src: string;
   label?: string;
@@ -10,7 +11,7 @@ const { src, label = "INTRO.MP3", duration = 30 } = Astro.props;
 <div
   id="intro-audio-player"
   class="intro-audio-wrap"
-  aria-label="My upcoming audiobook on disrupting the blockchain"
+  aria-label="Reproductor de audio intro"
 >
   <span class="intro-audio-prefix" aria-hidden="true">$</span>
   <span class="intro-audio-cmd" aria-hidden="true">play</span>
@@ -18,7 +19,7 @@ const { src, label = "INTRO.MP3", duration = 30 } = Astro.props;
   <button
     id="intro-audio-btn"
     class="intro-audio-btn"
-    aria-label="Preview my upcoming audiobook"
+    aria-label="Reproducir audio de introducción"
     type="button"
   >
     <svg
@@ -63,12 +64,11 @@ const { src, label = "INTRO.MP3", duration = 30 } = Astro.props;
     aria-valuenow={0}
     aria-valuemin={0}
     aria-valuemax={duration}
-    aria-label="Audio progress"
+    aria-label="Progreso del audio"
   >
     <div class="intro-progress-bar" id="intro-progress-bar"></div>
   </div>
 
-  <!-- Tiempo -->
   <span class="intro-time" id="intro-time" aria-live="off">
     <span id="intro-current">0:00</span><span class="opacity-30"> /</span><span
       class="opacity-30"
@@ -81,6 +81,7 @@ const { src, label = "INTRO.MP3", duration = 30 } = Astro.props;
 
   <audio id="intro-audio-el" preload="metadata" aria-hidden="true">
     <source src={src} type="audio/mpeg" />
+    Wrong browser amigo.
   </audio>
 </div>
 
@@ -166,7 +167,6 @@ const { src, label = "INTRO.MP3", duration = 30 } = Astro.props;
     display: none !important;
   }
 
-  /* ── Barras de onda ── */
   .intro-waveform {
     display: flex;
     align-items: center;
@@ -293,15 +293,14 @@ const { src, label = "INTRO.MP3", duration = 30 } = Astro.props;
       btn.setAttribute(
         "aria-label",
         playing
-          ? "Pawz ;)"
-          : "Play"
+          ? "Pausar audio de introducción"
+          : "Reproducir audio de introducción"
       );
     };
 
     btn.addEventListener("click", () => {
       if (audio.paused) {
         audio.play().catch(() => {
-          /* autoplay bloqueado, ignorar */
         });
       } else {
         audio.pause();
