@@ -25,7 +25,7 @@ export const SOCIALS: Social[] = [
   },
   {
     name: "X",
-    href: "https://x.com/",
+    href: "https://en.wikipedia.org/wiki/Rectal_prolapse",
     linkTitle: `${SITE.title} on X`,
     icon: IconBrandX,
   },
