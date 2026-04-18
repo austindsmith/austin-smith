@@ -32,7 +32,6 @@ const { src, label = "INTRO.MP3", duration = 30 } = Astro.props;
         d="M3 2.5a.5.5 0 0 1 .765-.424l10 5.5a.5.5 0 0 1 0 .848l-10 5.5A.5.5 0 0 1 3 13.5v-11z"
       ></path>
     </svg>
-    <!-- Ícono pause -->
     <svg
       id="intro-icon-pause"
       class="intro-icon hidden"
@@ -82,7 +81,6 @@ const { src, label = "INTRO.MP3", duration = 30 } = Astro.props;
 
   <audio id="intro-audio-el" preload="metadata" aria-hidden="true">
     <source src={src} type="audio/mpeg" />
-    Wrong browser amigo.
   </audio>
 </div>
 
