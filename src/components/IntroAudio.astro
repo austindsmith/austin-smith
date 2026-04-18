@@ -10,7 +10,7 @@ const { src, label = "INTRO.MP3", duration = 30 } = Astro.props;
 <div
   id="intro-audio-player"
   class="intro-audio-wrap"
-  aria-label="My upcoming audiobook on disrupting the blockchain
+  aria-label="My upcoming audiobook on disrupting the blockchain"
 >
   <span class="intro-audio-prefix" aria-hidden="true">$</span>
   <span class="intro-audio-cmd" aria-hidden="true">play</span>
@@ -82,7 +82,7 @@ const { src, label = "INTRO.MP3", duration = 30 } = Astro.props;
 
   <audio id="intro-audio-el" preload="metadata" aria-hidden="true">
     <source src={src} type="audio/mpeg" />
-    Tu navegador no soporta el elemento audio.
+    Wrong browser amigo.
   </audio>
 </div>
 
