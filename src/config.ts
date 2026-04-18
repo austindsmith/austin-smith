@@ -23,7 +23,7 @@ export const SITE = {
   timezone: "America/Denver",
   introAudio: {
     enabled: true,
-    src: "/audio/intro-web.mp3",
+    src: "/audio/intro.mp3",
     label: "INTRO.MP3",
     duration: 30,
   },
