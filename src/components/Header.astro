@@ -105,6 +105,13 @@ const isActive = (path: string) => {
                 >About</a
               >
             </li>
+            <li>
+              <a
+                href="/resume"
+                class:list={["nav-link", { "nav-active": isActive("/resume") }]}
+                >Resume</a
+              >
+            </li>
             <li class="flex items-center">
               <a
                 href="/search"
